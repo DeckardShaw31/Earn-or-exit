@@ -1,0 +1,173 @@
+{
+  "delta_from_useful_life": {
+    "Microsoft/Alphabet servers (10-K, via secondary compilation)": 0.1667,
+    "Meta most servers and network assets (FY2025 10-K)": 0.1818,
+    "Amazon subset of servers and networking (from 2025)": 0.2,
+    "Epoch 1-GW TCO model IT equipment (Michael & Cottier 2026)": 0.2
+  },
+  "delta_economic": {
+    "Cottier et al. 2024 (0.14 OOM/yr)": 0.3224,
+    "Cottier et al. 2024 CI low (0.10 OOM/yr)": 0.2303,
+    "Cottier et al. 2024 CI high (0.18 OOM/yr)": 0.4145,
+    "Hobbhahn et al. 2023 (FLOP/$ doubling 2.1 yr)": 0.3301,
+    "Epoch Trends 2026 (perf/$ 1.49x/yr)": 0.3988,
+    "Epoch Trends 2026 CI low (1.36x/yr)": 0.3075,
+    "Epoch Trends 2026 CI high (1.66x/yr)": 0.5068
+  },
+  "capital_per_GPU_median_DGX_usd": 41217.0,
+  "s_E_tco_published": 0.0698,
+  "s_E_tco_straight_line": 0.0853,
+  "s_E_tco_it_life_sensitivity": {
+    "3-yr IT life (total $12B)": 0.0495,
+    "3-yr IT life (total $13B)": 0.0457,
+    "7-yr IT life (total $7B)": 0.0849
+  },
+  "non_energy_opex_share_of_tco": 0.0368,
+  "energy_cost_per_gpu_hour_usd": 0.0907,
+  "s_E_rental_crosscheck": 0.0261,
+  "hazards": {
+    "Gemini: all listed models": {
+      "n_models": 83,
+      "retired_by_eval_date": 38,
+      "exposure_model_years": 53.13,
+      "hazard_mle_per_year": 0.715,
+      "hazard_90ci": [
+        0.536,
+        0.938
+      ],
+      "n_with_announced_retirement": 51,
+      "scheduled_life_mean_years": 0.84,
+      "scheduled_life_median_years": 0.75,
+      "hazard_incl_announced_retirements": 0.907
+    },
+    "Gemini: stable (non-preview)": {
+      "n_models": 39,
+      "retired_by_eval_date": 13,
+      "exposure_model_years": 25.09,
+      "hazard_mle_per_year": 0.518,
+      "hazard_90ci": [
+        0.306,
+        0.824
+      ],
+      "n_with_announced_retirement": 16,
+      "scheduled_life_mean_years": 1.24,
+      "scheduled_life_median_years": 1.19,
+      "hazard_incl_announced_retirements": 0.579
+    },
+    "Gemini: preview": {
+      "n_models": 44,
+      "retired_by_eval_date": 25,
+      "exposure_model_years": 28.04,
+      "hazard_mle_per_year": 0.892,
+      "hazard_90ci": [
+        0.62,
+        1.245
+      ],
+      "n_with_announced_retirement": 35,
+      "scheduled_life_mean_years": 0.66,
+      "scheduled_life_median_years": 0.59,
+      "hazard_incl_announced_retirements": 1.224
+    },
+    "Gemini: stable text LLMs": {
+      "n_models": 13,
+      "retired_by_eval_date": 4,
+      "exposure_model_years": 10.66,
+      "hazard_mle_per_year": 0.375,
+      "hazard_90ci": [
+        0.128,
+        0.859
+      ],
+      "n_with_announced_retirement": 5,
+      "scheduled_life_mean_years": 1.23,
+      "scheduled_life_median_years": 1.26,
+      "hazard_incl_announced_retirements": 0.446
+    },
+    "Flagship commercial models (Wolfrath + Epoch)": {
+      "n_models": 16,
+      "retired_by_eval_date": 8,
+      "exposure_model_years": 33.26,
+      "hazard_mle_per_year": 0.24,
+      "hazard_90ci": [
+        0.12,
+        0.434
+      ],
+      "n_with_announced_retirement": 14,
+      "scheduled_life_mean_years": 2.06,
+      "scheduled_life_median_years": 1.72,
+      "hazard_incl_announced_retirements": 0.418
+    }
+  },
+  "growth_A": {
+    "Ho et al. 2024 central (8.4 months)": {
+      "annual_factor": 2.69,
+      "log_rate": 0.99
+    },
+    "Ho et al. 2024 headline (8 months)": {
+      "annual_factor": 2.83,
+      "log_rate": 1.04
+    },
+    "Ho et al. 2024 95% CI slow (14.3 months)": {
+      "annual_factor": 1.79,
+      "log_rate": 0.582
+    },
+    "Ho et al. 2024 95% CI fast (4.5 months)": {
+      "annual_factor": 6.35,
+      "log_rate": 1.848
+    },
+    "Epoch pre-training compute efficiency (3.0x/yr, project CSV)": {
+      "annual_factor": 3.0,
+      "log_rate": 1.099
+    },
+    "Gundlach et al. 2025 hardware-adjusted (~3x/yr)": {
+      "annual_factor": 3.0,
+      "log_rate": 1.099
+    },
+    "Gundlach et al. 2025 GPQA Pareto hardware-adjusted 3.72x": {
+      "annual_factor": 3.72,
+      "log_rate": 1.314
+    }
+  },
+  "log_change_pM_per_year": {
+    "Gundlach 5x/yr": -1.609,
+    "Gundlach 10x/yr": -2.303,
+    "Epoch 9x/yr (slowest)": -2.197,
+    "Epoch median 50x/yr": -3.912,
+    "Epoch post-2024 median 200x/yr": -5.298,
+    "Epoch 900x/yr (fastest)": -6.802
+  },
+  "alpha_and_rebound_thresholds": {
+    "Omega_M=0.0": {
+      "alpha": 0.403,
+      "psi_L": 1.0,
+      "long_run_sigma_threshold": 1.0,
+      "short_run_sigma_threshold": 1.0
+    },
+    "Omega_M=0.01": {
+      "alpha": 0.393,
+      "psi_L": 0.9835,
+      "long_run_sigma_threshold": 0.9835,
+      "short_run_sigma_threshold": 0.9899
+    },
+    "Omega_M=0.02": {
+      "alpha": 0.383,
+      "psi_L": 0.9676,
+      "long_run_sigma_threshold": 0.9676,
+      "short_run_sigma_threshold": 0.9797
+    },
+    "Omega_M=0.05": {
+      "alpha": 0.353,
+      "psi_L": 0.9227,
+      "long_run_sigma_threshold": 0.9227,
+      "short_run_sigma_threshold": 0.9486
+    },
+    "Omega_M=0.083": {
+      "alpha": 0.32,
+      "psi_L": 0.878,
+      "long_run_sigma_threshold": 0.878,
+      "short_run_sigma_threshold": 0.9136
+    }
+  },
+  "iea_cagr_2024_2030": 0.147,
+  "iea_cagr_2024_2035": 0.1013,
+  "compute_stock_log_growth": 1.224
+}

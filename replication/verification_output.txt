@@ -1,0 +1,42 @@
+SYMBOLIC CHECKS
+S1_shortrun_elasticity_residual => 0
+S2_longrun_elasticity_residual => 0
+S8_threshold_psiM => [(sigma - 1)/(alpha*sigma - 1)]
+S8_d_etaS_d_psiM => alpha - 1/sigma
+S5_j_pareto => (a_m/a_star)**theta/(theta - 1)
+S5_astar => (Phi*a_m**theta/(F*(theta - 1)))**(1/theta)
+S5_elast_astar_Phi => 1/theta
+S5_elast_pstar_Phi => (theta - 1)/theta
+S5_elast_astar_F => -1/theta
+S4_jprime_residual => 0
+S6_theta_star => [(s_H + tau - 1)/(s_H - s_W*tau + tau - 1)]
+S6_factorised_residual => 0
+S6_jacobian_at_star => Gamma*(s_H + tau - 1)
+S6_dthetastar_dtau => s_W*(s_H - 1)/(s_H - s_W*tau + tau - 1)**2
+S6_tau_for_half => [(1 - s_H)/(s_W + 1)]
+S6_draft_tau_coexist_gives_theta => (s_H - s_W)/(s_H - 2*s_W)
+S7_integral_q0.5_beta2 => 3
+S7_integral_q1_beta2 => oo
+S7_integral_q1.5_beta2 => oo
+S7_integral_q0_beta1 => oo
+
+NUMERICAL CHECKS
+PASS N1 long-run price closed form  [0 mismatches / 300]
+PASS N2 long-run price monotone, bounded by p_c  [0 failures / 300]
+PASS N3 short-run cutoff equilibrium exists and is unique (continuum)  [0 failures / 400]
+PASS N4 local capability-revenue condition  [0 failures / 300]
+PASS N5 free-entry block recursion  [0 failures / 300]
+PASS N6 compute elasticity sigma/psi_L - 1  [0 failures / 377 finite cases]
+PASS N7 long-run regime classification  [0 failures / 400]
+PASS N8 hump (sigma<1, peak at psi_L=sigma) / monotone (sigma>=1)  [0 failures / 7]
+PASS N9 capability shock: shakeout <=> compute falls <=> spending falls  [0 failures / 300 (33 overhang)]
+PASS N10a cost shock: overhang <=> elastic demand (Pareto)  [0 failures / 150 (134 overhang)]
+PASS N10b tax shock: overhang, LR cutoff unchanged, exit if cutoff interior  [0 failures / 200]
+PASS N11 entry unprofitable during overhang (both buffer regimes)  [0 failures in 23 paths]
+PASS N12 deep-pocket cutoff strictly inside (a*, a_s); longer overhang (nonempty exit wave)  [0 failures in 425 paths]
+PASS N13 machine wealth share: ODE = closed form; limit Theta*(tau) or 0  [0 failures / 200; max |ODE - closed form| = 1.3e-12]
+PASS N14 escape integrability condition  [0 failures / 6]
+PASS N15 cost pass-through equals marginal-to-average capability ratio  [elasticity 0.55951065 vs ratio 0.55951065]
+PASS N12b empty exit wave: no exit in either regime, identical overhang (T_d = T)  [0 failures in 94 paths]
+PASS N16 frontier growth: closed form, unique cutoff decreasing in g, g->0 limit, exit age ln(a/a0)/g, BGP supply  [0 failures across subchecks a-e (40 + 20 draws)]
+PASS N17 closed form psi_M* = (A/A_hat)^(sigma-1)  [0 failures / 233 finite cases]

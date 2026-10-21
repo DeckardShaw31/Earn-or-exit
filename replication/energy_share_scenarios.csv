@@ -1,0 +1,10 @@
+scenario,delta_X,capital_per_GPU_usd,utilization,PUE,p_E_usd_per_kWh,kWh_per_GPU_year,energy_usd_per_GPU_year,capital_charge_usd_per_GPU_year,kappaE_pE_per_usd_capital,s_E
+"Baseline: 5-yr life, PUE 1.10, EIA industrial 2025",0.2,50697,0.75,1.1,0.0862,9214,794,10139,0.0157,0.0726
+Baseline + facility capex (14-yr life),0.2,50697,0.75,1.1,0.0862,9214,794,11181,0.0157,0.0663
+"Mid: 5.5-yr life, PUE 1.14, util 0.71, DC-weighted 2024 price",0.1818,50697,0.71,1.14,0.0834,9040,754,9218,0.0149,0.0756
+Low: economic depreciation 0.322/yr,0.3224,50697,0.75,1.1,0.0862,9214,794,16343,0.0157,0.0463
+Low: obsolescence 0.399/yr + facility capex,0.3988,50697,0.75,1.1,0.0862,9214,794,21258,0.0157,0.036
+"High: 6-yr life, PUE 1.25, EIA commercial 2025",0.1667,50697,0.75,1.25,0.1341,10471,1404,8449,0.0277,0.1425
+"Low energy intensity: PUE 1.09, util 0.71, EIA industrial 2024, max DGX price",0.2,57656,0.71,1.09,0.0813,8644,703,11531,0.0122,0.0574
+"High energy intensity: PUE 1.56 (Uptime avg), util 0.75, EIA commercial 2025",0.2,50697,0.75,1.56,0.1341,13068,1752,10139,0.0346,0.1474
+"Extreme: 6-yr life, HGX price, PUE 1.56, commercial, full TDP",0.1667,38277,1.0,1.56,0.1341,17424,2337,6379,0.061,0.2681
